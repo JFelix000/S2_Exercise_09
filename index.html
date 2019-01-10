@@ -52,29 +52,31 @@
          Pizza will not share your contact information with third 
          parties, <em>ever</em>. </p>
       <p>Required values are marked by an asterisk (*)</p>
-        <form id="survey" action="http://www.example.com/redball/survey" method="post">
+
+      
+        <form id="survey" action="http://www.example.com/redball/survey" method="POST" />
             <fieldset id="custInfo">
                 <legend>Customer Information</legend>
                 <label for="name">Name*</label>
                 <input name="custName" id="name" type="text" placeholder="first and last name" />
-
+<br>
                 <label for="street">Street</label>
                 <input name="custStreet" id="street" type="text" />
-                
+                <br>
                 <label for="city">City</label>
                 <input name="custCity" id="city" type="text" value="Ormond Beach" />
-
+<br>
                 <label for="state">State</label>
                 <input type="custState" id="state" type="text" value="FL" />
-
+<br>
                 <label for="zip">Zip</label>
                 <input name="custZip" id="zip" type="text" placeholder="nnnnn (-nnnn)" />
-                
+                <br>
                 <label for="phone">Phone</label>
                 <input name="custPhone" id="phone" type="tel" placeholder="(nnn) nnn-nnnn" />
-
+<br>
                 <label for="mail">E-mail</label>
-                <input name="custEmail" id="mail" type="email">
+                <input name="custEmail" id="mail" type="email" />
             </fieldset>
             <fieldset id="expInfo">
                 <legend>Share Your Experiencee at Red Ball Pizza</legend>
