@@ -20,6 +20,7 @@
    <link href="rb_reset.css" rel="stylesheet" />
    <link href="rb_styles.css" rel="stylesheet" />
    <script src="rb_formsubmit.js"></script>
+   <link rel="stylesheet" href="rb_forms.css" />
 
 </head>
 
@@ -52,32 +53,67 @@
          Pizza will not share your contact information with third 
          parties, <em>ever</em>. </p>
       <p>Required values are marked by an asterisk (*)</p>
+        
 
+        
       
         <form id="survey" action="http://www.example.com/redball/survey" method="POST" />
+<!-- survey1 -->
             <fieldset id="custInfo">
                 <legend>Customer Information</legend>
+                <div class="formRow">
                 <label for="name">Name*</label>
                 <input name="custName" id="name" type="text" placeholder="first and last name" />
-<br>
+            </div>
+                <div class="formRow">
                 <label for="street">Street</label>
                 <input name="custStreet" id="street" type="text" />
-                <br>
+            </div>
+                <div class="formRow">
                 <label for="city">City</label>
                 <input name="custCity" id="city" type="text" value="Ormond Beach" />
-<br>
+            </div>
+                <div class="formRow">
                 <label for="state">State</label>
                 <input type="custState" id="state" type="text" value="FL" />
-<br>
+            </div>
+                <div class="formRow">
                 <label for="zip">Zip</label>
                 <input name="custZip" id="zip" type="text" placeholder="nnnnn (-nnnn)" />
-                <br>
+            </div>
+                <div class="formRow">
                 <label for="phone">Phone</label>
                 <input name="custPhone" id="phone" type="tel" placeholder="(nnn) nnn-nnnn" />
-<br>
+            </div>
+                <div class="formRow">
                 <label for="mail">E-mail</label>
                 <input name="custEmail" id="mail" type="email" />
+            </div>
+
+
+                <div class="formRow">
+                <label for="info">Where did you hear about us? <br />(select all that apply)</label>
+                <select multiple name="infoSrc" id="info" size="5">
+                    <option value="internet">Internet</option>
+                    <option value="mag">Magazine</option>
+                    <option value="news">Newspaper</option>
+                    <option value="word">Word of Mouth</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="formRow">
+                    <label for="dineSpin">How many times do you dine out per month?</label>
+                    <input name="dineOut" id="dineSpin" type="number" value="1" step="1" min="0" max="20" />
+                </div>
+
+                <div class="formRow">
+                        <label for="mailCB">Add me to your mailing list for great coupons and specials</label>
+                <input name="mailMe" id="mailCB" value="yes" type="checkbox" />
+
+                </div>
+        </div>
             </fieldset>
+<!-- survey2 -->
             <fieldset id="expInfo">
                 <legend>Share Your Experiencee at Red Ball Pizza</legend>
 
@@ -94,6 +130,7 @@
                         <option value="order3" selected>Dine in</option>
                         <option value="order4">Take 'n bake</option>
                     </select>
+                    
                     <!-- option buttons -->
                     <!-- <input name="name" value="value1" type="radio" /> -->
                 </div>
@@ -125,7 +162,7 @@
                             </fieldset>
                         </div>
                         <div class="formRow">
-                            <label for="dish">What's your favorite dish?</label>\
+                            <label for="dish">What's your favorite dish?</label>
                             <input name="favDish" id="dish" type="text" list="dishType" />
                             <datalist id="dishType">
                                 <option value="Antipasto Pizza" />
@@ -137,17 +174,9 @@
                             </datalist>
                         </div>
                         
-                        <div class="formRow">
-                            <label for="dineSpin">How many times do you dine out per month?</label>
-                            <input name="dineOut" id="dineSpin" type="number" value="1" step="1" min="0" max="20" />
-
-                        </div>
-                        <div class="formRow">
-                        <input name="mailMe" id="mailCB" value="yes" type="checkbox" />
-                        <label for="mailCB">Add me to your mailing list for great coupons and specials</label>
 
                         <div class="formRow">
-                            <label for="rangeBox">Rate the overall service<br />
+                            <label for="rangeBox">Rate the overall service</label>
                                 (0=poor; 10=great)</label>
                                 0
                                 <input name="serviceRate" id="rangeBox" type="range" value="5" step="1" min="0" max="10" /> 
@@ -155,10 +184,27 @@
                         </div>
                         <label for="commBox">Tell us more about your experience!</label>
                         <textarea name="custExp" id="commBox"></textarea>
+                        <br>
+                        <label for="appetizers">Starter Menu</label>
+                        <select name="meal">
+                        <optgroup  label="appetizers">
+                            <option value="sms">Spicy Mozarella Sticks</option>
+                            <option value="pr">Pepperoni Rolls</option>
+                            <option value="tr">Toasted Ravioli</option>
+                        </optgroup>
+                        <optgroup label="Salads">
+                            <option value="sms">Pasta Salad</option>
+                            <option value="tbs">Toasted Bread Salad</option>
+                            <option value="pr">Ceasar Salad</option>
+                        </optgroup>
+                    </select>
             </fieldset>
         </form>
      
    </section>
+
+
+<!-- Footer section -->
    <footer>
       <h1>ORDER</h1>
       <a href="#">Specials</a> <a href="#">Pizza</a> <a href="#">Pasta</a> <a href="#">Wings</a> <a href="#">Sides</a> <a href="#">Salads</a> <a href="#">Drinks</a> <a href="#">Desserts</a>
