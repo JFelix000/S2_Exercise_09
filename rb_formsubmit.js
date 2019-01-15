@@ -27,4 +27,3 @@ function setForm() {
       if (this.checkValidity()) alert("No invalid data detected. Will retain data for further testing.");
       return false;
    }
-}
